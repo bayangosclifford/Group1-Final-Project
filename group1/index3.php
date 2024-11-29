@@ -119,10 +119,9 @@
 
         $data = json_decode($response, true);
 
-        if (isset($data["title"], $data["url"], $data["author"], $data["published_at"])) {
+        if (isset($data["title"], $data["url"], $data["published_at"])) {
             $title2 = $data["title"] ?? 'No Title';
             $url2 = $data["url"] ?? '#';
-            $author2 = $data["author"] ?? 'Unknown Author';
             $published_at2 = $data["published_at"] ?? 'No date';
             $formattedDate2 = date('m/d/Y', strtotime($published_at2));
         }
